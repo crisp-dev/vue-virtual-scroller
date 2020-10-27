@@ -480,11 +480,6 @@ export default {
 
       if (this.emitUpdate) this.$emit('update', startIndex, endIndex)
 
-      // After the user has finished scrolling
-      // Sort views so text selection is correct
-      clearTimeout(this.$_sortTimer)
-      this.$_sortTimer = setTimeout(this.sortViews, 300)
-
       return {
         continuous,
       }
